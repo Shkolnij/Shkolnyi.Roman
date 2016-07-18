@@ -11,6 +11,15 @@ namespace WpfApplication3
         public int kil;
         public int nominal;
 
-       
+        public int Kil
+        {
+            get { return kil; }
+            set { kil = value; }
+        }
+        public int Nominal
+        {
+            get { return nominal; }
+            set { nominal = value; }
+        }
     }
 }
