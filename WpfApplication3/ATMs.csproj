@@ -78,7 +78,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ATMDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Bankaccount.cs" />
     <Compile Include="Infmoney.cs" />
+    <Compile Include="Money.cs" />
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>

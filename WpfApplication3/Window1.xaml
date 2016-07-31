@@ -5,15 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApplication3"
         mc:Ignorable="d"
-        Title="Window1" Height="302" Width="258">
+        Title="Window1" Height="261" Width="258">
     <Grid Margin="0,0,2,4">
-        <Button x:Name="button1" Content="Зняти кошти" HorizontalAlignment="Left" Margin="163,236,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="105,48,0,0"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="116" Margin="10,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" TextChanged="textBox1_TextChanged"/>
-        <Label x:Name="label" Content="" HorizontalAlignment="Left" Margin="10,22,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Введіть суму" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,48,0,0"/>
-        <Label x:Name="label3" Content="Кошти буде видано такими номіналами" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="230"/>
+        <Button x:Name="button1" Content="Зняти кошти" HorizontalAlignment="Left" Margin="163,198,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="135" Margin="105,10,0,0"/>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="116" Margin="10,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="230" TextChanged="textBox1_TextChanged"/>
+        <Label x:Name="label1" Content="Введіть суму" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"/>
+        <Label x:Name="label3" Content="Кошти буде видано такими номіналами" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>

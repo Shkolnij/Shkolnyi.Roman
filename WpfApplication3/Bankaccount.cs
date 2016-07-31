@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace WpfApplication3
 {
-    public class Infmoney
+    class Bankaccount
+        
     {
-        public int Kil { get; set; }
-        public int Nominal { get; set; }
+        public int Account { get; set; }
+        public int Password { get; set; }
+        public int Balans { get; set; }
     }
+
+    
 }

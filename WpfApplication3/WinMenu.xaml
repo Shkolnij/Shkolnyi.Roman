@@ -9,11 +9,12 @@
     <Grid Margin="0,0,2,-2">
         <Label x:Name="label" Content="Виберіть валюту" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="82" Margin="20,36,0,0" VerticalAlignment="Top" Width="106"/>
-        <RadioButton x:Name="radioButton" Content="UAN" HorizontalAlignment="Left" Margin="26,47,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton1" Content="USD" HorizontalAlignment="Left" Margin="26,67,0,0" VerticalAlignment="Top"/>
-        <RadioButton x:Name="radioButton2" Content="EUR" HorizontalAlignment="Left" Margin="26,87,0,0" VerticalAlignment="Top" Checked="radioButton2_Checked"/>
+        <RadioButton x:Name="UAN" Content="UAN" HorizontalAlignment="Left" Margin="26,47,0,0" VerticalAlignment="Top" Checked="UAN_Checked"/>
+        <RadioButton x:Name="USD" Content="USD" HorizontalAlignment="Left" Margin="26,67,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="EUR" Content="EUR" HorizontalAlignment="Left" Margin="26,87,0,0" VerticalAlignment="Top" Checked="radioButton2_Checked"/>
         <Button x:Name="button" Content="Зняти кошти" HorizontalAlignment="Left" Margin="150,36,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button x:Name="button1" Content="Баланс" HorizontalAlignment="Left" Margin="150,72,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button1" Content="Баланс" HorizontalAlignment="Left" Margin="150,67,0,0" VerticalAlignment="Top" Width="75" Click="button1_Click"/>
+        <Label x:Name="label1" Content="" HorizontalAlignment="Left" Margin="150,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="5.9,-1.615" Width="105"/>
 
     </Grid>
 </Window>

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WpfApplication3
 {
-    public class Infmoney
+    class Money
     {
-        public int Kil { get; set; }
-        public int Nominal { get; set; }
+        public string Currency { get; set; }
+        public double Exchange { get; set; }
     }
 }
