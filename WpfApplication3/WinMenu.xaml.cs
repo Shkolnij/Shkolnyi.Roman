@@ -20,24 +20,40 @@ namespace WpfApplication3
 
     public partial class WinMenu : Window
     {
+        public static string s;
         MainWindow MainWindow = new MainWindow();
         List<Money> Money = new List<Money>();
-        float Balans;
+        double  Balans;
+        public static double Balanse;
         public WinMenu()
         {
-            Balans = MainWindow.Balans;
             InitializeComponent();
             ReadData();
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Window1 Window = new Window1();
-            Window.Show();
+            if (UAN.IsChecked == true || EUR.IsChecked == true|| USD.IsChecked == true)
+            {
+                if (UAN.IsChecked == true)
+                {
+                    s = "UAN";
+                }
+                else if (EUR.IsChecked == true)
+                {
+                    s = "EUR";
+                }
+                else if (USD.IsChecked == true)
+                {
+                    s = "USD";
+                }
+                Balanse = translation(MainWindow.Balans);
+                WindowsOpen();
+            }
+            else MessageBox.Show("Виберіть валюту");
         }
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show(Convert.ToString(Balans));
-
+            MessageBox.Show("На вашому рахунку " + Convert.ToString(translation(MainWindow.Balans)));
         }
         private double pass(string Currency)
         {
@@ -88,6 +104,11 @@ namespace WpfApplication3
                     Money.Add(money);
                 }
             }
+        }
+        private void WindowsOpen()
+        {
+            Window1 Window = new Window1();
+            Window.Show();
         }
         private void UAN_Checked(object sender, RoutedEventArgs e)
         {

@@ -22,14 +22,16 @@ namespace WpfApplication3
     
     public partial class MainWindow : Window
     {
-        public float Balans;
+        public static double Balans;
         Bankaccount bancaccount = new Bankaccount();
+        public Stack<float> Stack = new Stack<float>();
 
         public MainWindow()
         {
             InitializeComponent();
-            float Balans;
-    }
+        }
+
+
 
         public void button_Click(object sender, RoutedEventArgs e)
         {
@@ -39,18 +41,19 @@ namespace WpfApplication3
             {
                 account = Convert.ToInt32(textBox.Text);
                 String_account = textBox.Text;
-            } catch (Exception)
+            }
+            catch (Exception)
             {
                 MessageBox.Show("Введіть № рахунка");
             }
-            
+
             String Cmd = "SELECT * FROM Bankaccount WHERE Account='" + String_account + "'";
             using (IDbConnection conection = new SqlConnection(Properties.Settings.Default.Connection))
             {
                 IDbCommand command = new SqlCommand(Cmd);
                 command.Connection = conection;
                 conection.Open();
-                
+
                 IDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
@@ -58,18 +61,17 @@ namespace WpfApplication3
                     bancaccount.Password = reader.GetInt32(2);
                     bancaccount.Balans = reader.GetInt32(3);
                     Balans = bancaccount.Balans;
-                    MessageBox.Show(Convert.ToString(Balans));
                 }
             }
-                if (password.Password == Convert.ToString(bancaccount.Password))
-                {
-                    WinMenu WinMenu = new WinMenu();
-                    Window1 Window = new Window1();
-                    WinMenu.Show();
-                }
-                else MessageBox.Show("Неправильно введений пароль");
+            if (password.Password == Convert.ToString(bancaccount.Password))
+            {
+                WinMenu WinMenu = new WinMenu();
+                Window1 Window = new Window1();
+                WinMenu.Show();
+            }
+            else MessageBox.Show("Неправильно введений пароль");
         }
-        
+    
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
